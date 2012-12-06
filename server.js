@@ -5,7 +5,7 @@ var sql = require('node-sqlserver');
 var conn_str = "Driver={SQL Server Native Client 10.0};" +
                "Server=tcp:t1lyf9i2sr.database.windows.net,1433;" +
                "Database=myrepo;Uid=sysuser@t1lyf9i2sr;" +
-               "Pwd={sys@2012};Encrypt=yes;Connection Timeout=30";
+               "Pwd=sys@2012;Encrypt=yes;Connection Timeout=30";
 
 var query = "SELECT description, priority, status FROM dbo.Tasks";
 
