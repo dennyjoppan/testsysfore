@@ -9,15 +9,20 @@ var conn_str = "Driver={SQL Server Native Client 10.0};" +
 
 var query = "SELECT description, priority, status FROM dbo.Tasks";
 
-http.createServer(function (req, res) {
+http.createServer(function (req, res) 
+{
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    sql.open(conn_str, function (err, conn) {
-        if (err) {
+    sql.open(conn_str, function (err, conn) 
+  {
+        if (err)
+        {
             res.end("Error opening the connection!");
             return;
         }
-        conn.queryRaw(query, function (err, results) {
-            if (err) {
+        conn.queryRaw(query, function (err, results)
+         {
+            if (err) 
+            {
                 res.write("Error running query!");
                 return;
             }
@@ -26,7 +31,7 @@ http.createServer(function (req, res) {
                 res.write("Description: " + results.rows[i][0] +
                           " Priority: " + results.rows[i][1] + 
                           " Status: " + results.rows[i][2] + "\n");
-            }
+         }
             res.end('Done --\n');
         }); 
     }); // sql.open
