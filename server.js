@@ -1,6 +1,6 @@
 var http = require('http');
 var port = process.env.port || 3000;
-var sql = require('node-sqlserver');
+var sql = require('msnodesql');
 
 
 var conn_str = "Driver={SQL Server Native Client 10.0};" +
