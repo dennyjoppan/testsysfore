@@ -1,5 +1,5 @@
 var http = require('http');
-var port = process.env.port || 1337;
+var port = process.env.port || 3000;
 var sql = require('node-sqlserver');
 
 
